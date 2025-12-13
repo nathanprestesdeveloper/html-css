@@ -1,0 +1,29 @@
+@charset "UTF-8"
+
+;@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+
+main {
+    background-color: #EF8A20;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 5px 5px 15px;
+    width: 600px;
+    margin: auto;
+}
+
+h1 {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+body {
+    background-image: linear-gradient(90deg, #280B4B, #3D0F71, #5617A6, #7D21EE );
+    background-attachment: fixed;
+}

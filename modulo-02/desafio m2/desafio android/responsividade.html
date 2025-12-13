@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            /*
+            Definimos qual a largura ideal, supondo que seja 800px, limitamos a largura então para 800px, se caso diminuir disso, ele cria a rolagem lateral e não distorce nada dentro do main: width: 800px;. Porém, para deixar ainda mais responsivo, vamos colocar uma largura máxima e uma mínima do conteúdo, para que o texto possa se adaptar também. Colocamos 320px, porque é a pixelagem dos celulares mais antigos e menores, então agora ate mesmo o conteúdo irá se adaptar. No caso da imagem, iremos usar a tag picture.
+            */
+            min-width: 320px;
+            max-width: 800px;
+            /*
+            Agora, vamos alinhar o conteúdo ao centro, através do código margin auto:
+            */
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, omnis reiciendis veniam eaque officia nulla dignissimos ipsum animi neque eos, laudantium sequi voluptatibus, quibusdam corrupti ex quaerat porro. Vitae, fugit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quos culpa omnis velit voluptatibus, adipisci nisi debitis deserunt excepturi doloremque. Quaerat nisi repellendus soluta nam obcaecati. Quas voluptates possimus rerum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis exercitationem alias similique magnam in eos, amet id molestias cum esse natus harum provident! Quaerat corporis veniam ipsum ex reiciendis ducimus!</p>
+        <!--Aqui abaixo nos deixamos a nossa imagem responsiva, ou seja, ela se adapta ao tamanho das telas. A tag source diz que o máximo que essa imagem irá aparecer ao usuário é quando a tela estiver até 599px, passando disso, ela irá abrir a próxima imagem que se adapta melhor a este formato de tela.-->
+        <picture>
+            <source media="(max-width: 600px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Blok">
+        </picture>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, maxime facilis vel quasi nisi unde quae eius cumque nemo delectus, alias laboriosam porro quam repudiandae eaque odit eos necessitatibus quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatum ut deserunt minima a explicabo praesentium aliquid voluptate, iure laborum optio ad aperiam culpa doloribus inventore quae dolores totam reiciendis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit dolore neque explicabo nulla, officiis tenetur sint mollitia molestias alias magni! Adipisci laboriosam debitis minima vitae explicabo, amet vel voluptatum autem!</p>
+    </main>
+</body>
+</html>
