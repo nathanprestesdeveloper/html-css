@@ -93,7 +93,12 @@ section {
     padding-left: 30px; /*Descolar parágrafos da borda*/
     font-family: var(--fonte03);
     font-size: 3.5vw;
-} 
+}
+
+/*Separação das estrofes, não parecer um texto inteiro*/
+section > p {
+    padding-bottom: 2em;
+}
 
 /*
 Configuração das sections com a class normal
@@ -110,14 +115,30 @@ Configuração das sections com a class imagem
 section.imagem {
     background-color: rgb(43, 42, 42);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.545); /*Sombra para dentro do quadro*/
+    background-size: cover;
+    background-attachment: fixed; /*Efeito Parallax - imagem fica com essas alterações*/
 }
 
 /*Configuração visual para os parágrafos que irão receber as imagens*/
 section.imagem > p {
-    background-color: rgb(99, 95, 95);
+    background-color: rgba(51, 50, 50, 0.471);
     display: inline-block; /*caixa se adapta ao tamho do conteúdo*/
     /*max-width: 400px; Não fica preto toda a linha, definição de largura*/
     padding: 5px;
+    text-shadow: 2px 2px 0px black;
+}
+
+/*Importando a primeira imagem*/
+section#img01 {
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+}
+
+/*Importando a segunda imagem*/
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+    background-position: right center;
 }
 
 /*
