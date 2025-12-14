@@ -1,11 +1,34 @@
 @charset "UTF-8";
 
 /*
+Importação de fontes
+*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+/*
+Fonte pacific one
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap'); 
+/*
+Fonte Sriracha
+*/
+
+/*
+Importação das fontes para usos dentro do código
+*/
+:root {
+    --fonte01: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte02: 'Passion one', sans-serif;
+    --fonte03: "Sriracha", cursive;
+}
+
+/*
 Configurações globais
 */
 * {
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
 }
 
 /*
@@ -14,6 +37,7 @@ Configurações de html e de body que ambos possuirão
 html, body {
     min-height: 100vh; /*Tamanho mínimo do html e do body é cem por cento da altura da view port*/
     background-color: darkgray;
+    font-family: var(--fonte01);
 }
 
 /*
@@ -32,6 +56,8 @@ header > h1 {
     padding-top: 50px; /*Descola do site*/
     /*text-transform: uppercase; - Deixa tudo maiúsculo*/
     font-variant: small-caps; /*Letras maiúsculas não exageradas. Primeira letra pouca coisa maior*/
+    font-family: var(--fonte02);
+    font-size: 10vw; /*Adapta tamanho para a view port enquanto não apredemos midia queries*/
 }
 
 /*
@@ -65,6 +91,8 @@ section {
     padding-bottom: 10vh; /*Colocando espaço interno em baixo*/
     line-height: 2em; /*Espaçamento duplo entre as linhas*/
     padding-left: 30px; /*Descolar parágrafos da borda*/
+    font-family: var(--fonte03);
+    font-size: 3.5vw;
 } 
 
 /*
@@ -87,8 +115,9 @@ section.imagem {
 /*Configuração visual para os parágrafos que irão receber as imagens*/
 section.imagem > p {
     background-color: rgb(99, 95, 95);
-    max-width: 400px; /*Não fica preto toda a linha, definição de largura*/
-    padding: 10px;
+    display: inline-block; /*caixa se adapta ao tamho do conteúdo*/
+    /*max-width: 400px; Não fica preto toda a linha, definição de largura*/
+    padding: 5px;
 }
 
 /*
