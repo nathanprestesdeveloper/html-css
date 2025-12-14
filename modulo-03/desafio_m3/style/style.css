@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+/*
+Configurações globais
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*
+Configurações de html e de body que ambos possuirão
+*/
+html, body {
+    min-height: 100vh; /*Tamanho mínimo do html e do body é cem por cento da altura da view port*/
+    background-color: darkgray;
+}
+
+/*
+Configurações do cabeçalho
+*/
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/*
+Configuração do H1 do header
+*/
+header > h1 {
+    padding-top: 50px; /*Descola do site*/
+    /*text-transform: uppercase; - Deixa tudo maiúsculo*/
+    font-variant: small-caps; /*Letras maiúsculas não exageradas. Primeira letra pouca coisa maior*/
+}
+
+/*
+Configuração do parágrafo do header (autor)
+*/
+header > p {
+    padding-bottom: 50px; /*50px no h1 e 50px no p, assim, fica simétrico*/
+}
+
+/*
+Configuração dos links para o cabeçalho e o rodapé
+*/
+header a, footer a {
+    color: white; /*Cor da letra*/
+    text-decoration: none; /*Sem decoração de link sublinhado*/
+    font-weight: bolder; /*Fonte em negrito*/
+}
+
+/*
+Configuração dos links para o cabeçalho e o rodapé (passar o mouse sobre)
+*/
+header a:hover, footer a:hover {
+    text-decoration: underline; /*Sublinhar*/
+}
+
+/*
+Configuração das sections como um todo (gole de água em cima e em baixo)
+*/
+section {
+    padding-top: 10vh; /*Colocando espaço interno em cima*/
+    padding-bottom: 10vh; /*Colocando espaço interno em baixo*/
+    line-height: 2em; /*Espaçamento duplo entre as linhas*/
+    padding-left: 30px; /*Descolar parágrafos da borda*/
+} 
+
+/*
+Configuração das sections com a class normal
+*/
+section.normal {
+    background-color: white;
+    color: black;
+
+}
+
+/*
+Configuração das sections com a class imagem
+*/
+section.imagem {
+    background-color: rgb(43, 42, 42);
+    color: white;
+}
+
+/*Configuração visual para os parágrafos que irão receber as imagens*/
+section.imagem > p {
+    background-color: rgb(99, 95, 95);
+    max-width: 400px; /*Não fica preto toda a linha, definição de largura*/
+    padding: 10px;
+}
+
+/*
+Configuração do rodapé
+*/
+footer {
+    background-color: black;
+    color: white;
+    text-align: center; /*centralizar texto no rodapé*/
+    padding: 15px; /*Engordar o rodapé*/
+}
