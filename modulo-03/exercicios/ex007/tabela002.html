@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela grande</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;  
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        td.populacao {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        thead {
+            background-color: gray;
+        }
+
+        tfoot {
+            background-color: gray;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Aprendendo a trabalhar com tabelas maiores!</h1>
+    <!--ANATOMIA PARA TABELAS GRANDES:
+        TABLE
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+    <table>
+        <thead>
+            <tr>
+                <th>Dados Referentes ao ano de 2025, aqui pode usar um colspan</th> <!--th sempre para títulos-->
+            </tr>
+            <tr>
+                <th>Estado</th> <!--th sempre para títulos-->
+                <th>População</th>
+                <th>Vs 2022</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="populacao">45 919 049</td>
+                <td>44 411 238</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="populacao">21 393 441</td>
+                <td>20 539 989</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="populacao">17 223 547</td>
+                <td>16 055 174	</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="populacao">14 870 907</td>
+                <td>14 141 626	</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="populacao">11 890 517</td>
+                <td>11 444 380</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="populacao">11 233 263</td>
+                <td>10 882 965</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Total de habitantes</th> <!--th sempre para títulos-->
+                <td><strong>117.475.372</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
